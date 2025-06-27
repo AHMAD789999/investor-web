@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { FiArrowRight, FiExternalLink } from "react-icons/fi";
-import { FiZap, FiDollarSign, FiGlobe, FiUsers } from "react-icons/fi";
+import { FiZap, FiDollarSign, FiGlobe,FiUpload,FiSend, FiMail, FiUsers } from "react-icons/fi";
 import { FiShield, FiCpu } from "react-icons/fi";
 import { FaRobot } from "react-icons/fa";
 import Image from "next/image";
@@ -148,6 +148,7 @@ const Hero = () => {
         "Deep tech ventures with innovations in AI, biotech, and quantum computing, reshaping industries and forging our advanced future.",
     },
   ];
+ 
 
   return (
     <>
@@ -283,6 +284,7 @@ const Hero = () => {
         </motion.div>
       </div>
     </section>
+ <hr className="mt-16 border-t-4 border-sky-400 w-3/4 mx-auto rounded-full" />
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-6">
           {/* Section Header */}
@@ -360,7 +362,7 @@ const Hero = () => {
           </motion.div>
         </div>
       </section>
-
+ <hr className="mt-16 border-t-4 border-sky-400 w-[95%] mx-auto rounded-full" />
  <section className="bg-black text-white py-20">
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
@@ -400,6 +402,47 @@ const Hero = () => {
         </div>
       </div>
     </section>
+     <hr className="mt-16 border-t-4 border-sky-400 w-[90%] mx-auto rounded-full relative top-[-50px]" />
+   <div className="flex justify-center items-center rounded-2xl ">
+     <section className="w-[90%] bg-blue-400/20 py-16">
+      <div className="w-[90%] mx-auto text-center">
+        {/* Heading */}
+        <motion.h2 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="text-4xl md:text-5xl font-bold text-sky-400 mb-4"
+        >
+          Ready to Raise Your Next Round?
+        </motion.h2>
+        
+        {/* Paragraph */}
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+          className="text-xl text-white mb-8 max-w-2xl mx-auto"
+        >
+          We're always looking to partner with ambitious founders solving real-world problems through technology.
+        </motion.p>
+        
+        {/* Buttons Row */}
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="flex flex-col sm:flex-row justify-center gap-4"
+        >
+          <button className="flex items-center justify-center gap-2 px-6 py-3 bg-sky-600 hover:bg-sky-700 text-white rounded-lg transition-colors">
+            <FiMail /> Contact Us
+          </button>
+          <button className="flex items-center justify-center gap-2 px-6 py-3 bg-white hover:bg-gray-200 text-black rounded-lg transition-colors">
+            <FiUpload /> Pitch Us
+          </button>
+        </motion.div>
+      </div>
+    </section>
+    </div>
     </>
   );
 };
