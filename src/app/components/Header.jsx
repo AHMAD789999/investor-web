@@ -172,8 +172,8 @@ const Header = () => {
                     onClick={() => setIsMenuOpen(false)}
                     className={`px-5 py-3 rounded-lg text-lg transition-all ${
                       pathname === link.href
-                        ? "bg-blue-600/20 text-white border border-blue-500/30"
-                        : "text-white/80 hover:text-white hover:bg-white/5"
+                        ? "bg-blue-600/20 font-bold text-white border border-blue-500/30"
+                        : "text-white/80 font-bold hover:text-white hover:bg-white/5"
                     }`}
                   >
                     {link.name}
@@ -185,7 +185,7 @@ const Header = () => {
                   onClick={() => setIsMenuOpen(false)}
                   className="mt-6 px-5 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-lg font-medium text-center"
                 >
-                  Contact Us
+                  Pitch-Us
                 </Link>
               </motion.nav>
             </>
