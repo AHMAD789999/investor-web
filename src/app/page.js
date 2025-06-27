@@ -2,7 +2,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 import { FiArrowRight, FiExternalLink } from "react-icons/fi";
-import { FiZap, FiDollarSign, FiGlobe,FiUpload,FiSend, FiMail, FiUsers } from "react-icons/fi";
+import { FiZap, FiDollarSign, FiGlobe,FiUpload,FiSend, FiCheck, FiMail, FiUsers } from "react-icons/fi";
 import { FiShield, FiCpu } from "react-icons/fi";
 import { FaRobot } from "react-icons/fa";
 import Image from "next/image";
@@ -284,7 +284,7 @@ const Hero = () => {
         </motion.div>
       </div>
     </section>
- <hr className="mt-16 border-t-4 border-sky-400 w-3/4 mx-auto rounded-full" />
+ <hr className="mt-16 border-t-4 border-sky-400 w-[90%] mx-auto rounded-full" />
       <section className="py-20 bg-gradient-to-b from-black to-gray-900">
         <div className="max-w-7xl mx-auto px-6">
           {/* Section Header */}
@@ -403,45 +403,91 @@ const Hero = () => {
       </div>
     </section>
      <hr className="mt-16 border-t-4 border-sky-400 w-[90%] mx-auto rounded-full relative top-[-50px]" />
-   <div className="flex justify-center items-center rounded-2xl ">
-     <section className="w-[90%] bg-blue-400/20 py-16">
-      <div className="w-[90%] mx-auto text-center">
-        {/* Heading */}
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="text-4xl md:text-5xl font-bold text-sky-400 mb-4"
-        >
-          Ready to Raise Your Next Round?
-        </motion.h2>
-        
-        {/* Paragraph */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.1 }}
-          className="text-xl text-white mb-8 max-w-2xl mx-auto"
-        >
-          We're always looking to partner with ambitious founders solving real-world problems through technology.
-        </motion.p>
-        
-        {/* Buttons Row */}
-        <motion.div 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="flex flex-col sm:flex-row justify-center gap-4"
-        >
-          <button className="flex items-center justify-center gap-2 px-6 py-3 bg-sky-600 hover:bg-sky-700 text-white rounded-lg transition-colors">
-            <FiMail /> Contact Us
-          </button>
-          <button className="flex items-center justify-center gap-2 px-6 py-3 bg-white hover:bg-gray-200 text-black rounded-lg transition-colors">
-            <FiUpload /> Pitch Us
-          </button>
-        </motion.div>
-      </div>
-    </section>
+     <div className="flex justify-center items-center rounded-2xl">
+      <section className="w-[90%] bg-blue-400/20 py-16">
+        <div className="w-[90%] mx-auto">
+          {/* Main Heading */}
+          <motion.h2 
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="text-4xl md:text-5xl font-bold text-sky-400 mb-4 text-center"
+          >
+            Ready to Raise Your Next Round?
+          </motion.h2>
+          
+          {/* Subheading */}
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="text-xl text-white mb-12 max-w-2xl mx-auto text-center"
+          >
+            We're always looking to partner with ambitious founders solving real-world problems through technology.
+          </motion.p>
+
+          {/* Content Row */}
+          <div className="flex justify-center items-center text-center">
+            <div className="flex items-center gap-3 mb-6">
+                <span className="text-2xl">📥</span>
+                <h3 className="text-4xl md:text-6xl font-bold text-sky-400 mb-4 text-center">What We Look For:</h3>
+              </div>
+          </div>
+          <div className="flex flex-col lg:flex-row gap-8 items-center justify-between">
+            {/* Left Column - Points */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="lg:w-1/2   rounded-xl p-8"
+            >
+              
+              
+              <ul className="space-y-4">
+                <li className="flex items-start gap-3">
+                  <FiCheck className="text-sky-400 mt-1 flex-shrink-0" />
+                  <span className="text-white/90">Early-stage startups (Pre-Seed to Series A)</span>
+                </li>
+                
+                <li className="flex items-start gap-3">
+                  <FiCheck className="text-sky-400 mt-1 flex-shrink-0" />
+                  <span className="text-white/90">Strong founding teams with domain expertise</span>
+                </li>
+                
+                <li className="flex items-start gap-3">
+                  <FiCheck className="text-sky-400 mt-1 flex-shrink-0" />
+                  <span className="text-white/90">Scalable tech-driven business models</span>
+                </li>
+                
+                <li className="flex items-start gap-3">
+                  <FiCheck className="text-sky-400 mt-1 flex-shrink-0" />
+                  <span className="text-white/90">Sectors: AI, SaaS, Fintech, HealthTech, Cybersecurity, Deeptech</span>
+                </li>
+              </ul>
+            </motion.div>
+
+            {/* Right Column - Buttons */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+              className="lg:w-1/2 flex flex-col justify-center h-full gap-6"
+            >
+              <button className="w-full lg:w-3/4 flex items-center justify-center gap-2 px-6 py-4 bg-sky-600 hover:bg-sky-700 text-white rounded-lg transition-colors text-lg">
+                <FiMail /> Contact Us
+              </button>
+              
+              <button className="w-full lg:w-3/4 flex items-center justify-center gap-2 px-6 py-4 bg-white hover:bg-gray-200 text-black rounded-lg transition-colors text-lg">
+                <FiUpload /> Pitch Us
+              </button>
+              
+              <p className="text-gray-300 text-sm mt-4">
+                We review all submissions within 72 hours
+              </p>
+            </motion.div>
+          </div>
+        </div>
+      </section>
     </div>
     </>
   );
