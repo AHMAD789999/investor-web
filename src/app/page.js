@@ -8,8 +8,8 @@ const Hero = () => {
   // Slider images (replace with your actual images)
   const slides = [
     "/h1.jpg", // Tech startup
-    "/h2.webp", // Team working
-    "/h3.jpg", // Office space
+    "/h5.webp", // Team working
+    "/h2.jpg", // Office space
     "/h4.jpg", // Investment meeting
   ];
 
@@ -67,7 +67,40 @@ const Hero = () => {
 
     requestAnimationFrame(step);
   }, [to]);
-
+ const startups = [
+    {
+      name: "NeuroTech AI",
+      sector: "Artificial Intelligence",
+      stage: "Series B",
+      logo: "/logos/neurotech.svg",
+      description: "Revolutionizing brain-computer interfaces for medical applications",
+      url: "#"
+    },
+    {
+      name: "GreenCharge",
+      sector: "Clean Energy",
+      stage: "Series A",
+      logo: "/logos/greencharge.svg",
+      description: "Next-gen battery technology for sustainable energy storage",
+      url: "#"
+    },
+    {
+      name: "Finova",
+      sector: "Fintech",
+      stage: "Seed",
+      logo: "/logos/finova.svg",
+      description: "AI-powered financial planning for millennials",
+      url: "#"
+    },
+    {
+      name: "QuantumLeap",
+      sector: "Quantum Computing",
+      stage: "Series C",
+      logo: "/logos/quantumleap.svg",
+      description: "Enterprise quantum computing solutions",
+      url: "#"
+    }
+  ];
   return (
     <span>
       {typeof to === "string" && to.includes("$") ? "$" : ""}
@@ -243,6 +276,89 @@ const Hero = () => {
   </div>
 </motion.div>
 
+      </div>
+    </section>
+      <section className="py-20 bg-gray-900">
+      <div className="max-w-7xl mx-auto px-6">
+        {/* Section Header */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-center mb-16"
+        >
+          <span className="text-blue-400 font-medium">OUR IMPACT</span>
+          <h2 className="text-3xl md:text-4xl font-bold text-white mt-3 mb-4">
+            Portfolio <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">Highlights</span>
+          </h2>
+          <p className="text-white/60 max-w-2xl mx-auto text-lg">
+            Discover the innovative startups we're proud to support
+          </p>
+        </motion.div>
+
+        {/* Portfolio Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {startups.map((startup, index) => (
+            <motion.div
+              key={index}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              viewport={{ once: true }}
+              whileHover={{ y: -10 }}
+              className="bg-white/5 rounded-xl border border-white/10 overflow-hidden hover:border-blue-400/30 transition-all group"
+            >
+              <div className="p-6">
+                <div className="flex items-center gap-4 mb-4">
+                  <div className="w-12 h-12 rounded-lg bg-white/5 flex items-center justify-center">
+                    {/* Replace with actual logo */}
+                    <div className="text-xl font-bold text-white">
+                      {startup.name.charAt(0)}
+                    </div>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-semibold text-white">{startup.name}</h3>
+                    <span className="text-sm text-blue-400">{startup.stage}</span>
+                  </div>
+                </div>
+                <p className="text-white/70 mb-6">{startup.description}</p>
+                <div className="flex justify-between items-center">
+                  <span className="text-xs px-3 py-1 rounded-full bg-white/5 text-white/60">
+                    {startup.sector}
+                  </span>
+                  <a 
+                    href={startup.url} 
+                    className="text-white/60 hover:text-blue-400 transition-colors"
+                    aria-label={`Visit ${startup.name}`}
+                  >
+                    <FiExternalLink />
+                  </a>
+                </div>
+              </div>
+              
+              {/* Hover glow effect */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 to-cyan-400/10 opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none" />
+            </motion.div>
+          ))}
+        </div>
+
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.4 }}
+          viewport={{ once: true }}
+          className="text-center mt-16"
+        >
+          <a
+            href="/portfolio"
+            className="inline-flex items-center px-6 py-3.5 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-medium group"
+          >
+            View Full Portfolio
+            <FiExternalLink className="ml-2 group-hover:translate-x-1 transition-transform" />
+          </a>
+        </motion.div>
       </div>
     </section>
  </>
