@@ -112,6 +112,20 @@ const Header = () => {
               href="/contact"
               className="px-5 py-2.5 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-medium text-sm flex items-center relative overflow-hidden"
             >
+              <span className="relative z-10">Pitch-Us</span>
+              <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-400 opacity-0 group-hover:opacity-100 transition duration-300" />
+            </Link>
+          </motion.div>
+                    <motion.div
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ delay: 0.3 }}
+            className="ml-2 relative group"
+          >
+            <Link
+              href="/contact"
+              className="px-5 py-2.5 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-medium text-sm flex items-center relative overflow-hidden"
+            >
               <span className="relative z-10">Contact</span>
               <span className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-400 opacity-0 group-hover:opacity-100 transition duration-300" />
             </Link>
