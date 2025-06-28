@@ -59,7 +59,7 @@ const StartupsPage = () => {
   ];
 
   return (
-    <div className="bg-gradient-to-b from-gray-900 to-black text-white">
+    <div className=" overflow-hidden bg-gradient-to-b from-gray-900 to-black text-white">
       {/* Hero Section */}
       <motion.section 
         initial={{ opacity: 0 }}
