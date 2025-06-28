@@ -6,11 +6,11 @@ import { useState, useEffect, useRef } from "react";
 
 const navLinks = [
   { name: "Home", href: "/" },
-  { name: "About Us", href: "/about" },
+  { name: "About Us", href: "/About-Us" },
   { name: "Portfolio", href: "/portfolio" },
-  { name: "For Startups", href: "/startups" },
+  { name: "For Startups", href: "/Startups" },
   { name: "Technology Perks", href: "/perks" },
-  { name: "Blogs", href: "/blogs" },
+  { name: "Blogs", href: "/Blogs" },
     { name: "Contact", href: "/contact" },
 ];
 
