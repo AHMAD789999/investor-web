@@ -2,7 +2,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { FiUsers, FiTrendingUp, FiGlobe, FiAward, FiBarChart2, FiHeart, FiTarget, FiEye, FiClock, FiLayers } from "react-icons/fi";
-
+import Link from "next/link";
 const AboutUs = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, amount: 0.1 });
@@ -25,14 +25,14 @@ const AboutUs = () => {
     <div className="bg-gradient-to-b from-gray-900 to-black text-white">
       {/* Hero Section */}
       <motion.section 
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
+        
+       
         transition={{ duration: 0.8 }}
         className="relative h-[60vh] flex items-center justify-center bg-[url('/about.jpg')] bg-cover bg-center"
       >
         <div className="absolute inset-0 bg-black/60 backdrop-blur-sm" />
         <motion.div
-          initial={{ y: 50, opacity: 0 }}
+          initial={{ y: 50, }}
           animate={{ y: 0, opacity: 1 }}
           transition={{ delay: 0.3, duration: 0.8 }}
           className="relative z-10 text-center px-6 max-w-4xl mx-auto"
@@ -57,7 +57,7 @@ const AboutUs = () => {
         className="py-20 px-6 max-w-7xl mx-auto"
       >
         <motion.div
-          initial={{ opacity: 0 }}
+          
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 0.8 }}
           className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20"
@@ -65,7 +65,7 @@ const AboutUs = () => {
           {stats.map((stat, index) => (
             <motion.div
               key={index}
-              initial={{ y: 30, opacity: 0 }}
+              initial={{ y: 30, }}
               animate={isInView ? { y: 0, opacity: 1 } : {}}
               transition={{ delay: index * 0.1, duration: 0.6 }}
               className="bg-white/5 rounded-xl p-6 border border-white/10 backdrop-blur-sm text-center"
@@ -81,7 +81,7 @@ const AboutUs = () => {
 
         {/* Vision & Mission Section */}
         <motion.div
-          initial={{ opacity: 0 }}
+          
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 0.4, duration: 0.8 }}
           className="mb-28 grid md:grid-cols-2 gap-8"
@@ -179,13 +179,13 @@ const AboutUs = () => {
 
         {/* NEW: Left Content + Right Image Section */}
         <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          initial={{  }}
+          animate={isInView ? { opacity: 1,  } : {}}
           transition={{ delay: 0.6, duration: 0.8 }}
           className="mb-28 grid md:grid-cols-2 gap-12 items-center"
         >
-          <div>
-            <div className="flex items-center gap-3 mb-4">
+          <div className="flex flex-col justify-center items-center">
+            <div className="flex justify-center items-center gap-3 mb-4">
               <FiClock className="text-2xl text-blue-400" />
               <span className="text-sm font-medium text-blue-400">OUR APPROACH</span>
             </div>
@@ -225,7 +225,7 @@ const AboutUs = () => {
             </div>
           </div>
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
+            initial={{  scale: 0.95 }}
             animate={isInView ? { opacity: 1, scale: 1 } : {}}
             transition={{ delay: 0.9, duration: 0.8 }}
             className="relative h-[500px] rounded-2xl overflow-hidden border border-white/10"
@@ -241,8 +241,8 @@ const AboutUs = () => {
 
         {/* Our Story */}
         <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          animate={isInView ? { opacity: 1, x: 0 } : {}}
+          initial={{   }}
+          animate={isInView ? { opacity: 1, } : {}}
           transition={{ delay: 1.2, duration: 0.8 }}
           className="mb-28 grid md:grid-cols-2 gap-12 items-center"
         >
@@ -257,7 +257,7 @@ const AboutUs = () => {
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
           </motion.div>
-          <div className="order-1 md:order-2">
+          <div className="order-1 md:order-2 flex flex-col justify-center items-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
                 Our Origin Story
@@ -273,15 +273,17 @@ const AboutUs = () => {
               has grown into a global investment firm with presence across 
               3 continents.
             </p>
+            <Link href='/Blogs'>
             <button className="px-8 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-medium hover:shadow-lg hover:shadow-blue-500/30 transition-all">
               Read Full History
             </button>
+            </Link>
           </div>
         </motion.div>
 
         {/* Investment Philosophy */}
         <motion.div
-          initial={{ opacity: 0 }}
+          
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 1.4, duration: 0.8 }}
           className="mb-28"
@@ -325,7 +327,7 @@ const AboutUs = () => {
 
         {/* Team Section */}
         <motion.div
-          initial={{ opacity: 0 }}
+          
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 1.6, duration: 0.8 }}
           className="mb-28"
@@ -340,7 +342,7 @@ const AboutUs = () => {
             {team.map((member, index) => (
               <motion.div
                 key={index}
-                initial={{ opacity: 0, y: 30 }}
+                initial={{  y: 30 }}
                 animate={isInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ delay: 0.2 + index * 0.1 }}
                 className="group relative overflow-hidden rounded-xl border border-white/10"
@@ -362,7 +364,7 @@ const AboutUs = () => {
 
         {/* Values Section */}
         <motion.div
-          initial={{ opacity: 0 }}
+          
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ delay: 1.8, duration: 0.8 }}
           className="mb-28 bg-gradient-to-r from-blue-900/30 to-cyan-900/30 rounded-2xl p-12 border border-white/10"
@@ -411,7 +413,7 @@ const AboutUs = () => {
 
         {/* CTA Section */}
         <motion.div
-          initial={{ opacity: 0, scale: 0.95 }}
+          initial={{  scale: 0.95 }}
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ delay: 2, duration: 0.8 }}
           className="text-center"
@@ -424,12 +426,19 @@ const AboutUs = () => {
             collaborate, we'd love to hear from you.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-3.5 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-medium hover:shadow-xl hover:shadow-blue-500/20 transition-all">
-              Contact Our Team
-            </button>
-            <button className="px-8 py-3.5 rounded-lg bg-white/10 text-white font-medium border border-white/20 hover:bg-white/20 backdrop-blur-sm transition-all">
-              For Investors
-            </button>
+
+            <a
+  href="mailto:contact@capitaloven.com"
+  className="inline-block px-8 py-3.5 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-medium hover:shadow-xl hover:shadow-blue-500/20 transition-all"
+>
+  Contact Our Team
+</a>
+
+            <Link href='/pitch'>
+              <button className="px-8 py-3.5 rounded-lg bg-white/10 text-white font-medium border border-white/20 hover:bg-white/20 backdrop-blur-sm transition-all">
+              Pitch Your Startup
+              </button>
+            </Link>
           </div>
         </motion.div>
       </motion.section>

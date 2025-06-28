@@ -8,26 +8,19 @@ const Footer = () => {
     {
       title: "Company",
       links: [
+        { name: "Home", href: "/" },
+
         { name: "About Us", href: "/about" },
-        { name: "Team", href: "/team" },
-        { name: "Careers", href: "/careers" },
-        { name: "Press", href: "/press" },
-      ],
-    },
-    {
-      title: "Investments",
-      links: [
+        { name: "Blogs", href: "/Blogs" },
         { name: "Portfolio", href: "/portfolio" },
-        { name: "Investment Focus", href: "/focus" },
-        { name: "Success Stories", href: "/success" },
       ],
     },
     {
       title: "Resources",
       links: [
-        { name: "Blog", href: "/blog" },
-        { name: "Startup Toolkit", href: "/toolkit" },
-        { name: "Events", href: "/events" },
+        { name: "Blog", href: "/Blogs" },
+        { name: "Startup Toolkit", href: "/Startup" },
+        { name: "Technology Perks", href: "/perks" },
       ],
     },
     {
@@ -36,6 +29,13 @@ const Footer = () => {
         { name: "Privacy Policy", href: "/privacy" },
         { name: "Terms of Service", href: "/terms" },
         { name: "Disclaimer", href: "/disclaimer" },
+      ],
+    },
+    {
+      title: "Contact",
+      links: [
+        { name: "Phone: +92-300-1234567", href: "tel:+923001234567" },
+        { name: "Email: contact@capitaloven.com", href: "mailto:contact@capitaloven.com" },
       ],
     },
   ];
@@ -78,7 +78,7 @@ const Footer = () => {
               Fueling innovation and igniting growth for the next generation of
               startups.
             </p>
-            
+
             {/* Social Links */}
             <div className="flex gap-4">
               {socialLinks.map((social, index) => (
@@ -109,13 +109,33 @@ const Footer = () => {
                     whileHover={{ x: 5 }}
                     transition={{ type: "spring", stiffness: 300 }}
                   >
-                    <Link
-                      href={link.href}
-                      className="text-white/60 hover:text-blue-400 text-sm transition-colors flex items-center gap-2"
-                    >
-                      <span className="w-1 h-1 bg-blue-400 rounded-full opacity-0 group-hover:opacity-100 transition-all" />
-                      {link.name}
-                    </Link>
+                    {link.href.startsWith("#") ? (
+                      <a
+                        href={link.href}
+                        className="text-white/60 hover:text-blue-400 text-sm transition-colors flex items-center gap-2"
+                      >
+                        <span className="w-1 h-1 bg-blue-400 rounded-full opacity-0 group-hover:opacity-100 transition-all" />
+                        {link.name}
+                      </a>
+                    ) : link.href.startsWith("http") || link.href.startsWith("mailto") || link.href.startsWith("tel") ? (
+                      <a
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-white/60 hover:text-blue-400 text-sm transition-colors flex items-center gap-2"
+                      >
+                        <span className="w-1 h-1 bg-blue-400 rounded-full opacity-0 group-hover:opacity-100 transition-all" />
+                        {link.name}
+                      </a>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        className="text-white/60 hover:text-blue-400 text-sm transition-colors flex items-center gap-2"
+                      >
+                        <span className="w-1 h-1 bg-blue-400 rounded-full opacity-0 group-hover:opacity-100 transition-all" />
+                        {link.name}
+                      </Link>
+                    )}
                   </motion.li>
                 ))}
               </ul>
@@ -131,7 +151,7 @@ const Footer = () => {
           <p className="text-white/40 text-sm mb-4 md:mb-0">
             © {new Date().getFullYear()} CapitalOven. All rights reserved.
           </p>
-          
+
           <div className="flex gap-6">
             <Link
               href="/privacy"

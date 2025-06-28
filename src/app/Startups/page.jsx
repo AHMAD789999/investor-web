@@ -2,7 +2,7 @@
 import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 import { FiZap, FiDollarSign, FiBarChart2, FiUsers, FiClock, FiCheck, FiArrowRight } from "react-icons/fi";
-
+import Link from "next/link";
 const StartupsPage = () => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: false, amount: 0.1 });
@@ -87,9 +87,10 @@ const StartupsPage = () => {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-3.5 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-medium hover:shadow-xl hover:shadow-blue-500/20 transition-all flex items-center gap-2 mx-auto"
+            className="px-5 py-3.5 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-medium hover:shadow-xl hover:shadow-blue-500/20 transition-all flex items-center gap-2 mx-auto"
           >
-            Apply for Funding <FiArrowRight />
+          <Link href='/pitch'>
+            Apply for Funding </Link>
           </motion.button>
         </motion.div>
       </motion.section>
@@ -190,7 +191,7 @@ const StartupsPage = () => {
             className="relative h-96 rounded-2xl overflow-hidden border border-white/10"
           >
             <img 
-              src="/mission.webp" 
+              src="/h1.webp" 
               alt="Investment process" 
               className="w-full h-full object-cover"
             />
@@ -286,12 +287,18 @@ const StartupsPage = () => {
             We review applications on a rolling basis and typically respond within 5 business days
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="px-8 py-3.5 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-medium hover:shadow-xl hover:shadow-blue-500/20 transition-all">
-              Apply for Funding
-            </button>
-            <button className="px-8 py-3.5 rounded-lg bg-white/10 text-white font-medium border border-white/20 hover:bg-white/20 backdrop-blur-sm transition-all">
-              Download Investment Criteria
-            </button>
+               <a
+  href="mailto:contact@capitaloven.com"
+  className="inline-block px-8 py-3.5 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-medium hover:shadow-xl hover:shadow-blue-500/20 transition-all"
+>
+  Contact Our Team
+</a>
+
+            <Link href='/pitch'>
+              <button className="px-8 py-3.5 rounded-lg bg-white/10 text-white font-medium border border-white/20 hover:bg-white/20 backdrop-blur-sm transition-all">
+              Pitch Your Startup
+              </button>
+            </Link>
           </div>
         </motion.div>
       </motion.section>

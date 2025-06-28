@@ -6,6 +6,7 @@ import { FiZap, FiDollarSign, FiGlobe,FiUpload,FiSend, FiCheck, FiMail, FiUsers 
 import { FiShield, FiCpu } from "react-icons/fi";
 import { FaRobot } from "react-icons/fa";
 import Image from "next/image";
+import Link from "next/link";
 const Hero = () => {
   // Slider images (replace with your actual images)
   const slides = [
@@ -208,14 +209,18 @@ const Hero = () => {
               transition={{ delay: 0.9, duration: 0.8 }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
+             <Link href='/portfolio'>
               <button className="px-8 py-3.5 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-medium flex items-center gap-2 group hover:shadow-xl hover:shadow-blue-500/20 transition-all">
                 Explore Portfolio
                 <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
               </button>
+             </Link>
               
-              <button className="px-8 py-3.5 rounded-lg bg-white/10 text-white font-medium border border-white/20 hover:bg-white/20 backdrop-blur-sm transition-all">
-                For Founders
-              </button>
+                <Link href='/pitch'>
+                  <button className="px-8 py-3.5 rounded-lg bg-white/10 text-white font-medium border border-white/20 hover:bg-white/20 backdrop-blur-sm transition-all">
+                    For Founders
+                  </button>
+                </Link>
             </motion.div>
           </motion.div>
         </div>
@@ -473,13 +478,17 @@ const Hero = () => {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="lg:w-1/2 flex flex-col justify-center h-full gap-6"
             >
+             <Link href='/contact'>
               <button className="w-full lg:w-3/4 flex items-center justify-center gap-2 px-6 py-4 bg-sky-600 hover:bg-sky-700 text-white rounded-lg transition-colors text-lg">
                 <FiMail /> Contact Us
               </button>
-              
-              <button className="w-full lg:w-3/4 flex items-center justify-center gap-2 px-6 py-4 bg-white hover:bg-gray-200 text-black rounded-lg transition-colors text-lg">
-                <FiUpload /> Pitch Us
-              </button>
+             </Link>
+
+              <Link href='/pitch'>
+                <button className="w-full lg:w-3/4 flex items-center justify-center gap-2 px-6 py-4 bg-white hover:bg-gray-200 text-black rounded-lg transition-colors text-lg">
+                  <FiUpload /> Pitch Us
+                </button>
+              </Link>
               
               <p className="text-gray-300 text-sm mt-4">
                 We review all submissions within 72 hours

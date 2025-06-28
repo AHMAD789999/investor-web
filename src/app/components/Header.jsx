@@ -3,6 +3,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
+import { FiArrowRight } from "react-icons/fi";
 
 const navLinks = [
   { name: "Home", href: "/" },
@@ -11,7 +12,7 @@ const navLinks = [
   { name: "For Startups", href: "/Startups" },
   { name: "Technology Perks", href: "/perks" },
   { name: "Blogs", href: "/Blogs" },
-    { name: "Contact", href: "/contact" },
+    { name: "Contact", href: "/contact  " },
 ];
 
 const Header = () => {
@@ -111,7 +112,7 @@ const Header = () => {
             className="ml-2 relative group"
           >
             <Link
-              href="/contact"
+              href="/pitch"
               className="px-5 py-2.5 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-medium text-sm flex items-center relative overflow-hidden"
             >
               <span className="relative z-10">Pitch-US</span>
@@ -181,7 +182,7 @@ const Header = () => {
                 ))}
 
                 <Link
-                  href="/contact"
+                  href="/pitch"
                   onClick={() => setIsMenuOpen(false)}
                   className="mt-6 px-5 py-3 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 text-white text-lg font-medium text-center"
                 >
