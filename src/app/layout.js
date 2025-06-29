@@ -1,9 +1,14 @@
 import './globals.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
+
 export const metadata = {
   title: 'CapitalOven',
   description: 'Venture Capital Firm Website',
+  icons:{
+    icon:'/logo.png',
+  }
+  
 }
 
 export default function RootLayout({ children }) {

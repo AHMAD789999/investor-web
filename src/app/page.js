@@ -186,10 +186,12 @@ const Hero = () => {
           >
             <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-                Fueling Innovation
+              Built by Founders.
+
               </span>
               <br />
-              <span className="text-white">Igniting Growth</span>
+              <span className="text-white">Backed by CapitalOven.
+</span>
             </h1>
             
             <motion.p
@@ -198,9 +200,8 @@ const Hero = () => {
               transition={{ delay: 0.6, duration: 0.8 }}
               className="text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto"
             >
-              We partner with visionary founders to build the next generation of
-              transformative companies. From seed to scale, we're with you at every
-              stage.
+            We’ve been around since 2011, with over a decade of experience in the digital space. Today, we invest in AI, SaaS, and DeepTech startups from Seed to Series A, helping founders grow with funding and hands-on guidance from idea to scale.
+
             </motion.p>
 
             <motion.div
@@ -213,14 +214,16 @@ const Hero = () => {
 
               <Link href='/portfolio'>
               <button className="px-8 py-3.5 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-medium flex items-center gap-2 group hover:shadow-xl hover:shadow-blue-500/20 transition-all">
-                Explore Portfolio
+        Explore Our Portfolio
+
                 <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
               </button>
              </Link>
               
                 <Link href='/pitch'>
                   <button className="px-8 py-3.5 rounded-lg bg-white/10 text-white font-medium border border-white/20 hover:bg-white/20 backdrop-blur-sm transition-all">
-                    For Founders
+                   Submit Your Pitch
+
                   </button>
                 </Link>
              </div>
