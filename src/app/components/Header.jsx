@@ -123,7 +123,7 @@ const Header = () => {
               href="/pitch"
               className="px-5 py-2.5 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-medium text-sm flex items-center relative overflow-hidden"
             >
-              <span className="relative z-10">Pitch-US</span>
+              <span className="relative z-10">Pitch US</span>
             </Link>
           </motion.div>
         </nav>
@@ -174,6 +174,24 @@ const Header = () => {
                 transition={{ type: "spring", damping: 25 }}
                 className="fixed top-0 right-0 w-80 h-screen bg-gradient-to-b from-gray-900 to-black border-l border-white/10 z-40 pt-24 px-6 flex flex-col gap-4"
               >
+                 <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-2xl font-bold flex justify-center items-center text-white"
+          >
+             <img
+  src='/log.png'
+  width={60}
+  height={50}
+  alt='CapitalOven Image'
+  className=""
+/>
+
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
+                  Capital
+                </span>
+                <span className="text-white">Oven</span>
+          </motion.div>
                 {navLinks.map((link) => (
                   <Link
                     key={link.href}

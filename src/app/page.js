@@ -264,12 +264,12 @@ const Hero = () => {
             We’re partners, mentors, and collaborators, committed to capturing value
             in India's dynamic tech landscape.
           </p>
-          <a
-            href="#contact"
+          <Link
+            href="/pitch"
             className="text-white font-semibold border-b border-white inline-flex items-center gap-1 hover:text-blue-400 transition-colors"
           >
             Get in touch <span>↗</span>
-          </a>
+          </Link>
         </motion.div>
 
         {/* Right Image */}
