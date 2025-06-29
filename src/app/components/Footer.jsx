@@ -62,17 +62,26 @@ const Footer = () => {
         {/* Main Footer Content */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 mb-12">
           {/* Logo and Description */}
-          <div className="col-span-1">
+          <div className="col-span-1 relative top-[-30px]">
             <Link href="/" className="flex items-center mb-4">
-              <motion.h2
-                whileHover={{ scale: 1.02 }}
-                className="text-2xl font-bold text-white"
-              >
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-                  Capital
-                </span>
-                <span className="text-white">Oven</span>
-              </motion.h2>
+              <motion.div
+                         initial={{ opacity: 0 }}
+                         animate={{ opacity: 1 }}
+                         className="text-2xl font-bold flex justify-center items-center text-white"
+                       >
+                          <img
+               src='/log.png'
+               width={60}
+               height={50}
+               alt='CapitalOven Image'
+               className=""
+             />
+             
+                           <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
+                               Capital
+                             </span>
+                             <span className="text-white">Oven</span>
+                       </motion.div>
             </Link>
             <p className="text-white/60 text-sm mb-6">
               Fueling innovation and igniting growth for the next generation of

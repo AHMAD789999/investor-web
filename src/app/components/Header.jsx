@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState, useEffect, useRef } from "react";
 import { FiArrowRight } from "react-icons/fi";
-
+import Image from "next/image";
 const navLinks = [
   { name: "Home", href: "/" },
   { name: "About Us", href: "/About-Us" },
@@ -52,7 +52,7 @@ const Header = () => {
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.8 }}
-      className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-black/30 border-b border-white/10 shadow-lg"
+      className="fixed top-0 left-0 w-full z-50 backdrop-blur-xl bg-black/50 border-b border-white/10 shadow-lg"
     >
       <div className="max-w-7xl mx-auto px-5 py-3 flex items-center justify-between">
         {/* Logo with glow */}
@@ -60,12 +60,20 @@ const Header = () => {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            className="text-2xl font-bold text-white"
+            className="text-2xl font-bold flex justify-center items-center text-white"
           >
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
-              Capital
-            </span>
-            <span className="text-white">Oven</span>
+             <img
+  src='/log.png'
+  width={60}
+  height={50}
+  alt='CapitalOven Image'
+  className=""
+/>
+
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-300">
+                  Capital
+                </span>
+                <span className="text-white">Oven</span>
           </motion.div>
           <div className="absolute inset-0 bg-blue-600/10 rounded-lg opacity-0 group-hover:opacity-100 transition duration-300" />
         </Link>
