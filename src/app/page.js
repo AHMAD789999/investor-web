@@ -261,14 +261,13 @@ Explore Our Portfolio
             About Capital <br /> Oven
           </h2>
           <p className="text-white/80 text-base leading-relaxed mb-6">
-            Rukam Sitara, based in New Delhi, is a venture capital firm dedicated
-            to early-stage technology startups in India. <br />
-            Established in 2023 by Archana Jahagirdar, we’re more than just investors.
-            We’re partners, mentors, and collaborators, committed to capturing value
-            in India's dynamic tech landscape.
+            CapitalOven is a Kolkata-based venture capital firm backing early-stage technology startups across India.
+With a digital legacy since 2011, we bring deep domain expertise, founder-first capital, and long-term support to help AI, SaaS, and deep tech startups grow from an idea to scale.
+We're more than investors — partners, collaborators, and believers in India's next generation of tech innovators.
+
           </p>
           <Link
-            href="/pitch"
+            href="/contact"
             className="text-white font-semibold border-b border-white inline-flex items-center gap-1 hover:text-blue-400 transition-colors"
           >
             Get in touch <span>↗</span>
