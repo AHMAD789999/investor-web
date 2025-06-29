@@ -211,21 +211,21 @@ const Hero = () => {
               className="flex-col md:flex-row items-center  sm:flex-col gap-4 justify-center"
             >
              <div className="flex-col md:flex-row flex items-center gap-4 justify-center">
- <Link href='/pitch'>
-                  <button className="px-8 py-3.5 rounded-lg bg-white/10 text-white font-medium border border-white/20 hover:bg-white/20 backdrop-blur-sm transition-all">
-                   Submit Your Pitch
 
-                  </button>
-                </Link>
-              <Link href='/portfolio'>
+              <Link href='/pitch'>
               <button className="px-8 py-3.5 rounded-lg bg-gradient-to-r from-blue-600 to-cyan-500 text-white font-medium flex items-center gap-2 group hover:shadow-xl hover:shadow-blue-500/20 transition-all">
-        Explore Our Portfolio
+         Submit Your Pitch
 
                 <FiArrowRight className="group-hover:translate-x-1 transition-transform" />
               </button>
              </Link>
               
-               
+                <Link href='/portfolio'>
+                  <button className="px-8 py-3.5 rounded-lg bg-white/10 text-white font-medium border border-white/20 hover:bg-white/20 backdrop-blur-sm transition-all">
+                  
+Explore Our Portfolio
+                  </button>
+                </Link>
              </div>
             </motion.div>
           </motion.div>
